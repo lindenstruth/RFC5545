@@ -36,7 +36,7 @@ public extension EKEvent {
      *   a list of the exclusions to a recurrent event.  You will somehow need to track those yourself
      *   and add them as an EXDATE entry.
      */
-    public func rfc5545() -> String {
+    func rfc5545() -> String {
         var lines: [String] = ["BEGIN:VEVENT"]
 
         let dateFormat: Rfc5545DateFormat = timeZone == nil ? .floating : .utc
@@ -88,7 +88,7 @@ public extension EKEvent {
      *
      *  - Throws: An `RFC5545Exception`
      */
-    public func parse(rfc5545: String, store: EKEventStore, calendar: EKCalendar? = nil) throws -> (event: EKEvent, exclusions: [Date]?) {
+    func parse(rfc5545: String, store: EKEventStore, calendar: EKCalendar? = nil) throws -> (event: EKEvent, exclusions: [Date]?) {
         let rfc = try RFC5545(string: rfc5545)
         
         return (event: rfc.EKEvent(store, calendar: calendar), exclusions: rfc.exclusions)

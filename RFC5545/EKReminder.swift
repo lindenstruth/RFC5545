@@ -31,7 +31,7 @@ public extension EKReminder {
      *
      * - SeeAlso: [RFC5545 To-Do Component](https://tools.ietf.org/html/rfc5545#section-3.6.2)
      */
-    public func rfc5545(calendar cal: Calendar? = nil) -> String {
+    func rfc5545(calendar cal: Calendar? = nil) -> String {
         var lines = ["BEGIN:VTODO"]
 
         let calendar = cal ?? Calendar.current
