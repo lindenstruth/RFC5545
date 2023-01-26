@@ -64,11 +64,13 @@ extension EKRecurrenceRule {
         switch frequency {
         case .daily:
             freq = "DAILY"
-        case .monthly:
-            freq = "MONTHLY"
         case .weekly:
             freq = "WEEKLY"
+        case .monthly:
+            freq = "MONTHLY"
         case .yearly:
+            freq = "YEARLY"
+        @unknown default:
             freq = "YEARLY"
         }
 

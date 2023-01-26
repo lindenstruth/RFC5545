@@ -43,10 +43,12 @@ extension EKParticipant {
         let type: String
         switch participantType {
         case .group: type = "GROUP"
-        case .person: type = "INDIVIDUAL"
+        case .person: type = "INDIVIDUAL" // default according to rfc 5545
         case .resource: type = "RESOURCE"
         case .room: type = "ROOM"
         case .unknown: type = "UNKNOWN"
+        @unknown default:
+            type = "INDIVIDUAL"
         }
 
         lines.append("CUTYPE=\(type)")
