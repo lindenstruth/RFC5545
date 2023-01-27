@@ -19,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7DA7C7AB2983DBC6001D09BF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7DBEAE012983DE0200DFE10F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7DBEAE022983DE0700DFE10F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		7DBEAE032983DE1100DFE10F /* RFC5545.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RFC5545.podspec; sourceTree = "<group>"; };
 		D29285561D72366700421872 /* RFC5545.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RFC5545.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29285591D72366700421872 /* RFC5545.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFC5545.h; sourceTree = "<group>"; };
 		D292855B1D72366700421872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,10 +47,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DA7C7AC2983DBF6001D09BF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D29285581D72366700421872 /* RFC5545Package */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		D292854C1D72366700421872 = {
 			isa = PBXGroup;
 			children = (
-				D29285581D72366700421872 /* RFC5545 */,
+				7DBEAE012983DE0200DFE10F /* LICENSE */,
+				7DBEAE022983DE0700DFE10F /* Package.swift */,
+				7DA7C7AB2983DBC6001D09BF /* README.md */,
+				7DBEAE032983DE1100DFE10F /* RFC5545.podspec */,
+				7DA7C7AC2983DBF6001D09BF /* Source */,
 				D29285571D72366700421872 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,7 +75,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D29285581D72366700421872 /* RFC5545 */ = {
+		D29285581D72366700421872 /* RFC5545Package */ = {
 			isa = PBXGroup;
 			children = (
 				D29285651D723F5600421872 /* EKAlarm.swift */,
@@ -73,7 +89,7 @@
 				D29285591D72366700421872 /* RFC5545.h */,
 				D29285631D7236B200421872 /* RFC5545.swift */,
 			);
-			path = RFC5545;
+			path = RFC5545Package;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +311,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RFC5545/Info.plist;
+				INFOPLIST_FILE = Source/RFC5545Package/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -319,7 +335,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RFC5545/Info.plist;
+				INFOPLIST_FILE = Source/RFC5545Package/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
